@@ -82,7 +82,6 @@ steps:
     arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
     zipAfterPublish: true
 
-<<<<<<< HEAD
 - template: templates/test.yml
   parameters:
     buildConfiguration: 'Debug'
@@ -94,8 +93,6 @@ steps:
     searchFolder: $(Agent.TempDirectory)
     testResultsFiles: '**/*.trx'
 
-=======
->>>>>>> Fix formatting
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
